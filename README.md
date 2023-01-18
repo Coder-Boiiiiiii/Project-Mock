@@ -6,6 +6,35 @@ Project Mock is a project that I am working on.
 
 This program basically takes questions from past papers randomly and merges them into 1 PDF which is a mock paper.
 
+## User Manual 
+### Download
+1. On the homepage, press the green button which says "Code" on it:
+
+![image](https://user-images.githubusercontent.com/78927830/213275630-e4551769-dc0a-4b51-9a98-50758f54e1ff.png)
+
+2. Press "Download ZIP", this downloads the project as a ".zip" file:
+
+![image](https://user-images.githubusercontent.com/78927830/213276224-380e67d7-6afc-43ab-adf4-e2a19487e600.png)
+
+3. Go to the folder where the .zip file is located:
+
+![image](https://user-images.githubusercontent.com/78927830/213277053-99c18c11-059c-4bca-8dc4-11b6e75bd498.png)
+
+4. Extract the folder:
+
+![image](https://user-images.githubusercontent.com/78927830/213277526-3c70d9ee-3db9-4b35-9051-2809f9222456.png)
+
+### The Actual Program
+
+Just run MAIN.py:
+
+![image](https://user-images.githubusercontent.com/78927830/213278073-1b82e74f-eee3-42d7-855d-f106a664b7b7.png)
+
+### IMPORTANT
+1. Do NOT tamper with the folder named "Source"
+
+2. DO NOT tamper with the "Chosen Questions" and "Chosen Answers" folders
+
 ## Features
 ### Current Features
 Can make IGCSE Math 0580 papers (paper 4) with papers from 2021 and 2022.
