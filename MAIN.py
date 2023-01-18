@@ -220,13 +220,15 @@ def Slide_2():
     Button_Slide_2.place_forget()
 
     Slide_3_Topic.place(x = 2, y = 40)
-    txt_Q_Nums.place(x = 5, y = 70)
+    Slide_3_Topic_Lower.place(x = 2, y = 65)
+    txt_Q_Nums.place(x = 5, y = 90)
     Button_Slide_3.place(x = 5, y = 165)
 
 def Slide_3():
     global Num_of_Qs
 
     Slide_3_Topic.place_forget()
+    Slide_3_Topic_Lower.place_forget()
     txt_Q_Nums.place_forget()
     Button_Slide_3.place_forget()
 
@@ -391,6 +393,10 @@ Slide_2_Topic.place_forget()
 Slide_3_Topic = Label(Root_Window, text = "How Many Questions?", justify=LEFT, font=("Consolas", 12, "underline"), fg="#20C20E")
 Slide_3_Topic['background'] = "#171615"
 Slide_3_Topic.place_forget()
+
+Slide_3_Topic_Lower = Label(Root_Window, text = "[Maximum is 14]", justify=LEFT, font=("Consolas", 10), fg="#20C20E")
+Slide_3_Topic_Lower['background'] = "#171615"
+Slide_3_Topic_Lower.place_forget()
 
 Slide_4_Topic = Label(Root_Window, text = "Enter PDF Name", justify=LEFT, font=("Consolas", 12, "underline"), fg="#20C20E")
 Slide_4_Topic['background'] = "#171615"
