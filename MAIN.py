@@ -32,6 +32,16 @@ Num_of_Qs = 0
 Current_Path = pathlib.Path(__file__).parent.resolve()
 print(" ")
 
+#Making lists  of the files stored in each topic
+CH_Content_1 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp\Number") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp\Number", name))]
+CH_Content_2 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Algebra and Graphs") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Algebra and Graphs", name))]
+CH_Content_3 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Geometry and Coordinate Geometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Geometry and Coordinate Geometry", name))]
+CH_Content_4 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Mensuration") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Mensuration", name))]
+CH_Content_5 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Trignometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Trignometry", name))]
+CH_Content_6 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Vectors and Transformations") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Vectors and Transformations", name))]
+CH_Content_7 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Probabilities") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Probabilities", name))]
+CH_Content_8 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Statistics") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Statistics", name))]
+
 #Emptying directories
 print("Clearing files in Target Directories...")
 Target_Dir_qp = str(Current_Path) + fr"/Chosen Questions"
@@ -255,44 +265,49 @@ def Create_Mock(Question_Number, Q_Type, CH_Num):
     #Set chapter paths
     if CH_Num == 1:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}\Number"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp\Number") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp\Number", name))])
+        CH_Content = CH_Content_1
 
     elif CH_Num == 2:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Algebra and Graphs"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Algebra and Graphs") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Algebra and Graphs", name))])
+        CH_Content = CH_Content_2
     
     elif CH_Num == 3:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Geometry and Coordinate Geometry"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Geometry and Coordinate Geometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Geometry and Coordinate Geometry", name))])
+        CH_Content = CH_Content_3
 
     elif CH_Num == 4:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Mensuration"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Mensuration") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Mensuration", name))])
+        CH_Content = CH_Content_4
 
     elif CH_Num == 5:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Trignometry"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Trignometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Trignometry", name))])
+        CH_Content = CH_Content_5
 
     elif CH_Num == 6:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Vectors and Transformations"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Vectors and Transformations") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Vectors and Transformations", name))])
+        CH_Content = CH_Content_6
 
     elif CH_Num == 7:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Probabilities"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Probabilities") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Probabilities", name))])
+        CH_Content = CH_Content_7
 
     elif CH_Num == 8:
         CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Statistics"
-        CH_count = len([name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Statistics") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Statistics", name))])
-        
-    #Choosing a random file and appending it to the list we defined in the start
-    Question_Numbers.append(random.randint(0, CH_count))
+        CH_Content = CH_Content_8
+    
+    if Q_Type == "_qp":
+        #Choosing a random file and appending it to the list we defined in the start
+        Chosen_File = random.choice(CH_Content)
+        Question_Numbers.append(Chosen_File)
+
+    print(Question_Numbers)
 
     print("============================================= Question Information =============================================")
+    print("Question Type: " + Q_Type)
     print("Details For Question: " + str(Question_Number))
     Target_Folder = r"{}".format(Target_Dir)
     print("Origin: " + CH_dir)
-    pattern = "*" + str(Question_Numbers[Question_Number-1]) + ".pdf"
+    pattern = "*" + str(Question_Numbers[Question_Number])
     print("Pattern: '" + pattern + "'")
     Source_Files = os.listdir(CH_dir)
 
@@ -307,10 +322,38 @@ def Create_Mock(Question_Number, Q_Type, CH_Num):
                 print("================================================ End of Question ===============================================")
                 print("  ")
 
+    if Q_Type == "_qp":
+        #Removing the chosen file from the chapter content lists
+        if Chosen_File in CH_Content_1: CH_Content_1.remove(Chosen_File)
+        if Chosen_File in CH_Content_2: CH_Content_2.remove(Chosen_File)
+        if Chosen_File in CH_Content_3: CH_Content_3.remove(Chosen_File)
+        if Chosen_File in CH_Content_4: CH_Content_4.remove(Chosen_File)
+        if Chosen_File in CH_Content_5: CH_Content_5.remove(Chosen_File)
+        if Chosen_File in CH_Content_6: CH_Content_6.remove(Chosen_File)
+        if Chosen_File in CH_Content_7: CH_Content_7.remove(Chosen_File)
+        if Chosen_File in CH_Content_8: CH_Content_8.remove(Chosen_File)
+
 def Create_Mock_BTN():
     File_Name = txt_PDF_Name.get()
 
     for x in range(0, int(Num_of_Qs)):
+        if CH_Content_1 == [] and 1 in Chapters:
+            Chapters.remove(1)
+        if CH_Content_2 == [] and 2 in Chapters:
+            Chapters.remove(2)
+        if CH_Content_3 == [] and 3 in Chapters:
+            Chapters.remove(3)
+        if CH_Content_4 == [] and 4 in Chapters:
+            Chapters.remove(4)
+        if CH_Content_5 == [] and 5 in Chapters:
+            Chapters.remove(5)
+        if CH_Content_6 == [] and 6 in Chapters:
+            Chapters.remove(6)
+        if CH_Content_7 == [] and 7 in Chapters:
+            Chapters.remove(7)
+        if CH_Content_8 == [] and 8 in Chapters:
+            Chapters.remove(8)
+        
         CH = random.choice(Chapters)
         print("Chapter: " + str(CH))
         Create_Mock(x, "_qp", CH)
