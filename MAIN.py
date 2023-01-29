@@ -33,25 +33,25 @@ Current_Path = pathlib.Path(__file__).parent.resolve()
 print(" ")
 
 #Making lists  of the files stored in each topic
-CH_Content_1 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp\Number") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp\Number", name))]
-CH_Content_2 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Algebra and Graphs") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Algebra and Graphs", name))]
-CH_Content_3 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Geometry and Coordinate Geometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Geometry and Coordinate Geometry", name))]
-CH_Content_4 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Mensuration") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Mensuration", name))]
-CH_Content_5 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Trignometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Trignometry", name))]
-CH_Content_6 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Vectors and Transformations") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Vectors and Transformations", name))]
-CH_Content_7 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Probabilities") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Probabilities", name))]
-CH_Content_8 = [name for name in os.listdir(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Statistics") if os.path.isfile(os.path.join(str(Current_Path) + fr"/Source/Topic Questions/Paper 4_qp/Statistics", name))]
+CH_Content_1 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Number") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Number", name))]
+CH_Content_2 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Algebra and Graphs") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Algebra and Graphs", name))]
+CH_Content_3 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Geometry and Coordinate Geometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Geometry and Coordinate Geometry", name))]
+CH_Content_4 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Mensuration") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Mensuration", name))]
+CH_Content_5 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Trignometry") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Trignometry", name))]
+CH_Content_6 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Vectors and Transformations") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Vectors and Transformations", name))]
+CH_Content_7 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Probabilities") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Probabilities", name))]
+CH_Content_8 = [name for name in os.listdir(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Statistics") if os.path.isfile(os.path.join(str(Current_Path) + fr"\Source\Topic Questions\Paper 4_qp\Statistics", name))]
 
 #Emptying directories
 print("Clearing files in Target Directories...")
-Target_Dir_qp = str(Current_Path) + fr"/Chosen Questions"
-files_qp = glob.glob(Target_Dir_qp + "/*")
+Target_Dir_qp = str(Current_Path) + fr"\Chosen Questions"
+files_qp = glob.glob(Target_Dir_qp + "\*")
 for f in files_qp:
     if(os.path.basename(f) != "0 Front_Page.pdf"):
         os.remove(f)
 
-Target_Dir_ms = str(Current_Path) + fr"/Chosen Answers"
-files_ms = glob.glob(Target_Dir_ms + "/*")
+Target_Dir_ms = str(Current_Path) + fr"\Chosen Answers"
+files_ms = glob.glob(Target_Dir_ms + "\*")
 for f in files_ms:
     if(os.path.basename(f) != "0 Front_Page.pdf"):
         os.remove(f)
@@ -257,42 +257,42 @@ def Slide_4():
 
 def Create_Mock(Question_Number, Q_Type, CH_Num):
     if(Q_Type == "_qp"):
-        Target_Dir = str(Current_Path) + fr"/Chosen Questions"
+        Target_Dir = str(Current_Path) + fr"\Chosen Questions"
 
     elif(Q_Type == "_ms"):
-        Target_Dir = str(Current_Path) + fr"/Chosen Answers"
+        Target_Dir = str(Current_Path) + fr"\Chosen Answers"
     
     #Set chapter paths
     if CH_Num == 1:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}\Number"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Number"
         CH_Content = CH_Content_1
 
     elif CH_Num == 2:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Algebra and Graphs"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Algebra and Graphs"
         CH_Content = CH_Content_2
     
     elif CH_Num == 3:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Geometry and Coordinate Geometry"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Geometry and Coordinate Geometry"
         CH_Content = CH_Content_3
 
     elif CH_Num == 4:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Mensuration"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Mensuration"
         CH_Content = CH_Content_4
 
     elif CH_Num == 5:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Trignometry"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Trignometry"
         CH_Content = CH_Content_5
 
     elif CH_Num == 6:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Vectors and Transformations"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Vectors and Transformations"
         CH_Content = CH_Content_6
 
     elif CH_Num == 7:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Probabilities"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Probabilities"
         CH_Content = CH_Content_7
 
     elif CH_Num == 8:
-        CH_dir = str(Current_Path) + fr"/Source/Topic Questions/Paper 4{Q_Type}/Statistics"
+        CH_dir = str(Current_Path) + fr"\Source\Topic Questions\Paper 4{Q_Type}\Statistics"
         CH_Content = CH_Content_8
     
     if Q_Type == "_qp":
@@ -354,10 +354,14 @@ def Create_Mock_BTN():
         if CH_Content_8 == [] and 8 in Chapters:
             Chapters.remove(8)
         
-        CH = random.choice(Chapters)
-        print("Chapter: " + str(CH))
-        Create_Mock(x, "_qp", CH)
-        Create_Mock(x, "_ms", CH)
+        if Chapters != []:
+            CH = random.choice(Chapters)
+            print("Chapter: " + str(CH))
+            Create_Mock(x, "_qp", CH)
+            Create_Mock(x, "_ms", CH)
+        
+        else:
+            print("NO MORE QS LEFT!")
         
     #Notifying User That All Question Have Been Successfully Put Into Target Directory
     print("All questions have been created as individual PDFs and stored in: \n" + Target_Dir_qp)
