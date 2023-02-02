@@ -7,6 +7,15 @@ Project Mock is a project that I am working on.
 This program basically takes questions from past papers randomly and merges them into 1 PDF which is a mock paper.
 
 ## User Manual 
+### Prerequisites
+The only thing needed for this program to run is python, here are some helpful links if you don't have it:
+
+Python's Website: https://www.python.org/
+
+Python Programmer's Tutorial: https://www.youtube.com/watch?v=YKSpANU8jPE
+
+Tutorial by Amulya's Academy: https://www.youtube.com/watch?v=pfPCV7DXc5w
+
 ### Download
 1. On the homepage, press the green button which says "Code" on it:
 
